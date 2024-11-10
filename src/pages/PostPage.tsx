@@ -10,6 +10,7 @@ import {
 import { useQuery } from "@tanstack/react-query"
 import Markdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
+import { PulseLoader } from "react-spinners"
 
 export function PostPage() {
   const { issueNumber } = useParams()
@@ -23,7 +24,7 @@ export function PostPage() {
     return (
       <main className="w-[864px] m-auto">
         <section className="flex items-center justify-center mt-8">
-          <h1>Carregando</h1>
+          <PulseLoader color="#3A536B" speedMultiplier={0.7} />
         </section>
       </main>
     )
